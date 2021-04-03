@@ -18,6 +18,7 @@
 //*************************
 //prototipos de funçoes
 void AtualizaEstadoPino();
+
 //*************************
 void main()
 {
@@ -29,13 +30,18 @@ void main()
   
   while(TRUE){
      AtualizaEstadoPino();
-     for(i=0;i<8;i++){
-         vdados[i]=i;
-     }
+    vdados[0]= input(PIN_A0);
+    vdados[1]= input(PIN_A1);
+    vdados[2]= input(PIN_A2);
+    vdados[3]= input(PIN_A3);
+    vdados[4]= input(PIN_A4);
+    vdados[5]= input(PIN_A5);
+    vdados[6]= input(PIN_A6);
+    vdados[7]= input(PIN_A7);
      lcd_gotoxy(1,2);
      printf(lcd_putc,"Valor:");
      lcd_gotoxy(7,2);
-     for(i=0;i<8;i++){
+     for(i=0;i<7;i++){
      printf(lcd_putc,"%d",vdados[i]);
      delay_ms(500);
      }
